@@ -1,7 +1,9 @@
 var path = require('path')
 var config = require('../config')
 var utils = require('./utils')
+var externals = require('../externals')
 var projectRoot = path.resolve(__dirname, '../')
+var NpmInstallPlugin = require('npm-install-webpack-plugin')
 
 module.exports = {
   entry: {
@@ -82,7 +84,8 @@ module.exports = {
   vue: {
     loaders: utils.cssLoaders()
   },
-  externals: {
-    jquery: 'jQuery'
-  }
+  externals: externals,
+  plugins: [
+    new NpmInstallPlugin()
+  ]
 }

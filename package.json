@@ -1,6 +1,6 @@
 {
-  "name": "bz-script-loader",
-  "version": "1.0.3",
+  "name": "bz-login",
+  "version": "1.0.0",
   "description": "oauth2 button",
   "main": "dist/main.js",
   "keywords": [
@@ -11,12 +11,12 @@
   "author": "bigzhu <vermiliondun@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bigzhu/bz-script-loader.git"
+    "url": "git+https://github.com/bigzhu/bz-login.git"
   },
   "bugs": {
-    "url": "https://github.com/bigzhu/bz-script-loader/issues"
+    "url": "https://github.com/bigzhu/bz-login/issues"
   },
-  "homepage": "https://github.com/bigzhu/bz-script-loader#readme",
+  "homepage": "https://github.com/bigzhu/bz-login#readme",
   "files": [
     "dist"
   ],
@@ -27,15 +27,14 @@
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
   },
   "dependencies": {
-    "babel-runtime": "^6.0.0",
-    "jquery": "^3.0.0",
-    "less": "^2.7.1",
-    "less-loader": "^2.2.3",
-    "semantic-ui": "^2.2.1",
+    "jquery": "^3.1.0",
     "toastr": "^2.1.2",
-    "vue": "^1.0.21"
+    "vue": "latest"
   },
   "devDependencies": {
+    "less-loader": "^2.2.3",
+    "less": "^2.7.1",
+    "babel-runtime": "^6.0.0",
     "babel-core": "^6.0.0",
     "babel-loader": "^6.0.0",
     "babel-plugin-transform-runtime": "^6.0.0",
@@ -44,10 +43,10 @@
     "connect-history-api-fallback": "^1.1.0",
     "css-loader": "^0.23.0",
     "eslint": "^2.10.2",
+    "eslint-config-standard": "^5.1.0",
     "eslint-friendly-formatter": "^2.0.5",
     "eslint-loader": "^1.3.0",
     "eslint-plugin-html": "^1.3.0",
-    "eslint-config-standard": "^5.1.0",
     "eslint-plugin-promise": "^1.0.8",
     "eslint-plugin-standard": "^1.3.2",
     "eventsource-polyfill": "^0.9.6",
@@ -58,6 +57,7 @@
     "html-webpack-plugin": "^2.8.1",
     "http-proxy-middleware": "^0.12.0",
     "json-loader": "^0.5.4",
+    "npm-install-webpack-plugin": "^4.0.4",
     "ora": "^0.2.0",
     "shelljs": "^0.6.0",
     "url-loader": "^0.5.7",
