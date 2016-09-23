@@ -1,5 +1,7 @@
 module.exports = {
-  jquery: 'jQuery',
-  'toastr': 'toastr'
+  jQuery: 'jQuery',
+  jquery: 'jquery',
+  'toastr': 'toastr',
+  'vue': 'vue'
 }
 

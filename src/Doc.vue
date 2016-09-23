@@ -1,54 +1,3 @@
-<template>
-  <div class="ui segment">
-    <div>
-      <h1>Login</h1>
-      <p>
-        登录
-      </p>
-      <table class="ui celled table">
-        <thead>
-          <tr><th>参数</th><th>说明</th></tr>
-        </thead>
-        <tbody>
-          <tr v-for="parm in parms"> <td class="single line"> {{parm.parm}} </td> <td> {{parm.desc}} </td></tr>
-          <tr v-show="parms.length===0">
-            <td colspan="2">这货没有参数</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <code v-text="code">
-    </code>
-    <div class="ui divider"></div>
-    <login :login="login" :call_back="call_back"></login>
-  </div>
-</template>
-<script>
-  import Login from './Bz'
-  import toastr from 'toastr'
-  export default {
-    components: {
-      Login
-    },
-    data: function () {
-      return {
-        parms: [
-          {parm: 'call_back', desc: '登录成功后的回调函数'}
-        ],
-        code: `<login :login="login" :call_back="call_back"></login>`
-      }
-    },
-    methods: {
-      call_back: function () {
-        toastr.info('登录成功')
-      },
-      login: function (params) {
-        console.log(params)
-        window.alert('干登录的事')
-      }
-    }
-  }
-</script>
 <style lang=less>
   .original-text-bz {
     /*保留空格*/
@@ -65,3 +14,56 @@
     .original-text-bz;
   }
 </style>
+<template>
+  <div>
+    <doc :name="name"
+    :desc="desc"
+    :parm_desc="parm_desc"
+    :parms="parms"
+    :code="code"
+    >
+    <bz :login="login" :call_back="call_back"></bz>
+    </doc>
+  </div>
+</template>
+<script>
+  import 'bz-semantic-ui-card'
+  import 'bz-semantic-ui-grid'
+  import toastr from 'toastr'
+  import Bz from './Bz'
+  import Doc from 'bz-doc'
+  export default {
+    components: {
+      Bz,
+      Doc
+    },
+    route: {
+      deactivate: function (transition) {
+        this.$broadcast('unbind-scroll')
+        transition.next()
+      }
+    },
+    data: function () {
+      return {
+        name: 'bz-login',
+        parms: [
+          {parm: 'login', desc: '登录事件的句柄'},
+          {parm: 'call_back', desc: '登录成功后的回调函数'}
+        ],
+        desc: '登录页面',
+        parm_desc: `注意，如果使用的组件有路由，那么最好在切换路由的时候发送消息，解除绑定(参看本例子) <code>this.$broadcast('unbind-scroll')</code>`,
+        code: `<login :login="login" :call_back="call_back"></login>`
+      }
+    },
+    methods: {
+      call_back: function () {
+        toastr.info('登录成功')
+      },
+      login: function (params) {
+        console.log(params)
+        window.alert('干登录的事')
+      }
+    }
+  }
+</script>
+
