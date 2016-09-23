@@ -1,7 +1,7 @@
 {
   "name": "bz-login",
-  "version": "1.0.0",
-  "description": "oauth2 button",
+  "version": "1.0.5",
+  "description": "bz-login",
   "main": "dist/main.js",
   "keywords": [
     "vue",
@@ -27,7 +27,7 @@
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
   },
   "dependencies": {
-    "jquery": "^3.1.0",
+    "jQuery": "^3.1.0",
     "toastr": "^2.1.2",
     "vue": "latest"
   },

@@ -1,5 +1,5 @@
 module.exports = {
-  jquery: 'jQuery',
+  jQuery: 'jQuery',
   'toastr': 'toastr'
 }
 
