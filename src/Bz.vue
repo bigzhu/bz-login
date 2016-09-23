@@ -21,6 +21,7 @@
 
 <script>
   import toastr from 'toastr'
+  import 'bz-semantic-ui-form'
   export default {
     props: {
       login: {
@@ -52,8 +53,7 @@
           this.password_error = true
           toastr.error('请输入密码')
           return
-        }
-        var parm = {
+        } var parm = {
           user_name: this.user_name,
           password: this.password
         }
