@@ -21,6 +21,7 @@
 
 <script>
   import toastr from 'toastr'
+  import 'bz-semantic-ui-form'
   export default {
     props: {
       login: {
