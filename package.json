@@ -27,6 +27,8 @@
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
   },
   "dependencies": {
+    "bz-semantic-ui-button": "^1.0.4",
+    "bz-semantic-ui-form": "^1.0.4",
     "jQuery": "^3.1.0",
     "toastr": "^2.1.2",
     "vue": "latest"
