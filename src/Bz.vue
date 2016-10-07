@@ -2,25 +2,21 @@
   <div class="ui segment">
     <div class="center aligned column">
       <form class="ui form fluid ">
-        <div v-bind:class="{ 'error': user_name_error }" class="field">
+        <div :class="{ 'error': user_name_error }" class="field">
           <label>用户名</label>
           <input @focus="cleanError" v-model="user_name" placeholder="请输入邮箱/用户名" type="text">
         </div>
-        <div v-bind:class="{ 'error': password_error }" class="field">
+        <div :class="{ 'error': password_error }" class="field">
           <label>密码</label>
           <input v-model="password" @keyup.enter="check" @focus="cleanError" placeholder="请输入密码"  type="password">
         </div>
-        <a @click="check" class="ui blue submit button">登录</a>
+        <a @click="check" :class="{ loading: loading }" class="ui blue submit button">登录</a>
       </form>
     </div>
   </div>
 </template>
 
 <script>
-  import Vue from 'vue'
-  import VueResource from 'vue-resource'
-  Vue.use(VueResource)
-  var api_login = Vue.resource('/api_login{/parm}')
   import toastr from 'toastr'
   import 'bz-semantic-ui-form'
   import 'bz-semantic-ui-button'
@@ -31,6 +27,7 @@
     },
     data: function () {
       return {
+        loading: false,
         user_name: '',
         user_name_error: false,
         password: '',
@@ -58,20 +55,32 @@
         this.password_error = false
       },
       login: function () {
+        this.loading = true
         let parm = {}
         parm.user_name = this.user_name
         parm.password = this.password
+        let _this = this
 
-        api_login.save(parm).then(
-          (response) => {
-            if (response.data.error !== '0') {
-              throw new Error(response.data.error)
-            }
-            this.$emit('login_done')
+        window.fetch('/api_login', {
+          method: 'post',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
           },
-          (response) => {
+          body: JSON.stringify(parm)
+        }).then(function (response) {
+          _this.loading = false
+          return response
+        }).then(function (response) {
+          return response.json()
+        }).then(function (data) {
+          if (data.error !== '0') {
+            throw new Error(data.error)
           }
-        )
+          _this.$emit('login_done')
+        }).catch(function (error) {
+          throw new Error(error)
+        })
       }
     }
   }
