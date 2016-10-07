@@ -1,6 +1,3 @@
-<style lang=less>
-</style>
-
 <template>
   <div class="ui segment">
     <div class="center aligned column">
@@ -20,16 +17,15 @@
 </template>
 
 <script>
+  import Vue from 'vue'
+  import VueResource from 'vue-resource'
+  Vue.use(VueResource)
+  var api_login = Vue.resource('/api_login{/parm}')
   import toastr from 'toastr'
   import 'bz-semantic-ui-form'
   import 'bz-semantic-ui-button'
   export default {
     props: {
-      login: {
-        required: true
-      },
-      call_back: {
-      }
     },
     components: {
     },
@@ -55,16 +51,30 @@
           toastr.error('请输入密码')
           return
         }
-        var parm = {
-          user_name: this.user_name,
-          password: this.password
-        }
-        this.login(parm, this.call_back)
+        this.login()
       },
       cleanError: function () {
         this.user_name_error = false
         this.password_error = false
+      },
+      login: function () {
+        let parm = {}
+        parm.user_name = this.user_name
+        parm.password = this.password
+
+        api_login.save(parm).then(
+          (response) => {
+            if (response.data.error !== '0') {
+              throw new Error(response.data.error)
+            }
+            this.$emit('login_done')
+          },
+          (response) => {
+          }
+        )
       }
     }
   }
 </script>
+<style>
+</style>
