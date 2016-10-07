@@ -29,6 +29,7 @@
     "bz-semantic-ui-button": "latest",
     "bz-semantic-ui-container": "latest",
     "bz-semantic-ui-divider": "latest",
+    "bz-semantic-ui-form": "^1.0.4",
     "bz-semantic-ui-reset": "latest",
     "bz-semantic-ui-site": "latest",
     "bz-semantic-ui-table": "latest",
