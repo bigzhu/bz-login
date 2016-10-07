@@ -1,6 +1,6 @@
 {
   "name": "bz-login",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "bz-login",
   "main": "dist/main.js",
   "keywords": [
