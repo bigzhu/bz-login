@@ -62,6 +62,7 @@
         let _this = this
 
         window.fetch('/api_login', {
+          credentials: 'same-origin',
           method: 'post',
           headers: {
             'Accept': 'application/json',
