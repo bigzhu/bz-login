@@ -33,8 +33,7 @@
     "bz-semantic-ui-site": "latest",
     "bz-semantic-ui-table": "latest",
     "toastr": "latest",
-    "vue-resource": "^1.0.3",
-    "whatwg-fetch": "^1.0.0"
+    "vue-resource": "^1.0.3"
   },
   "devDependencies": {
     "autoprefixer": "^6.5.0",
