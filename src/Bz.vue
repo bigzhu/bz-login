@@ -79,8 +79,6 @@
             throw new Error(data.error)
           }
           _this.$emit('login_done')
-        }).catch(function (error) {
-          throw new Error(error)
         })
       }
     }

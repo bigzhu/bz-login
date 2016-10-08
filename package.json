@@ -26,6 +26,7 @@
     "test": ""
   },
   "dependencies": {
+    "bz-doc": "^2.0.3",
     "bz-semantic-ui-button": "latest",
     "bz-semantic-ui-container": "latest",
     "bz-semantic-ui-divider": "latest",
