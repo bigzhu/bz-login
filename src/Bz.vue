@@ -17,6 +17,7 @@
 </template>
 
 <script>
+  import 'whatwg-fetch'
   import toastr from 'toastr'
   import 'bz-semantic-ui-form'
   import 'bz-semantic-ui-button'
