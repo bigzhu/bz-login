@@ -28,6 +28,7 @@
   "dependencies": {
     "bz-doc": "^2.0.3",
     "bz-semantic-ui-button": "latest",
+    "bz-semantic-ui-card": "^2.0.1",
     "bz-semantic-ui-container": "latest",
     "bz-semantic-ui-divider": "latest",
     "bz-semantic-ui-form": "^1.0.4",
