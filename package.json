@@ -1,6 +1,6 @@
 {
   "name": "bz-login",
-  "version": "2.0.4",
+  "version": "2.0.7",
   "description": "bz-login",
   "main": "dist/main.js",
   "keywords": [
@@ -39,6 +39,8 @@
     "vue-resource": "^1.0.3"
   },
   "devDependencies": {
+    "whatwg-fetch": "^1.0.0",
+    "bz-doc": "^2.0.3",
     "autoprefixer": "^6.5.0",
     "babel-core": "^6.17.0",
     "babel-loader": "^6.2.5",
