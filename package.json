@@ -1,7 +1,7 @@
 {
-  "name": "bz-login",
-  "version": "2.0.8",
-  "description": "bz-login",
+  "name": "bz-base",
+  "version": "2.0.0",
+  "description": "bz-base",
   "main": "dist/main.js",
   "keywords": [
     "vue",
@@ -11,12 +11,12 @@
   "author": "bigzhu <vermiliondun@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bigzhu/bz-login.git"
+    "url": "git+https://github.com/bigzhu/bz-base.git"
   },
   "bugs": {
-    "url": "https://github.com/bigzhu/bz-login/issues"
+    "url": "https://github.com/bigzhu/bz-base/issues"
   },
-  "homepage": "https://github.com/bigzhu/bz-login#readme",
+  "homepage": "https://github.com/bigzhu/bz-base#readme",
   "files": [
     "dist"
   ],
@@ -25,10 +25,10 @@
     "build": "node build/build.js",
     "test": ""
   },
-  "dependencies": {},
+  "dependencies": {
+  },
   "devDependencies": {
-    "whatwg-fetch": "^1.0.0",
-    "bz-doc": "^2.0.3",
+    "vue": "latest",
     "autoprefixer": "^6.5.0",
     "babel-core": "^6.17.0",
     "babel-loader": "^6.2.5",
@@ -36,7 +36,6 @@
     "babel-preset-es2015": "^6.16.0",
     "babel-preset-stage-2": "^6.17.0",
     "babel-register": "^6.16.3",
-    "bz-semantic-ui-form": "^1.0.4",
     "connect-history-api-fallback": "^1.3.0",
     "css-loader": "^0.25.0",
     "eventsource-polyfill": "^0.9.6",
@@ -52,7 +51,6 @@
     "ora": "^0.3.0",
     "shelljs": "^0.7.4",
     "url-loader": "^0.5.7",
-    "vue": "latest",
     "vue-loader": "^9.5.1",
     "webpack": "^1.13.2",
     "webpack-dev-middleware": "^1.8.3",
