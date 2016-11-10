@@ -1,7 +1,7 @@
 {
-  "name": "bz-base",
+  "name": "bz-login",
   "version": "2.0.0",
-  "description": "bz-base",
+  "description": "bz-login",
   "main": "dist/main.js",
   "keywords": [
     "vue",
@@ -11,12 +11,12 @@
   "author": "bigzhu <vermiliondun@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bigzhu/bz-base.git"
+    "url": "git+https://github.com/bigzhu/bz-login.git"
   },
   "bugs": {
-    "url": "https://github.com/bigzhu/bz-base/issues"
+    "url": "https://github.com/bigzhu/bz-login/issues"
   },
-  "homepage": "https://github.com/bigzhu/bz-base#readme",
+  "homepage": "https://github.com/bigzhu/bz-login#readme",
   "files": [
     "dist"
   ],
