@@ -12,6 +12,7 @@
 </template>
 <script>
   import toastr from 'toastr'
+
   import Bz from './Bz'
   import Doc from 'bz-doc'
   export default {
