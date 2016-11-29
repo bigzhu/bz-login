@@ -1,4 +1,7 @@
 {
+  "name": "bz-base",
+  "version": "2.0.0",
+  "description": "bz-base",
   "name": "bz-login",
   "version": "2.1.6",
   "description": "bz-login",
@@ -11,12 +14,12 @@
   "author": "bigzhu <vermiliondun@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bigzhu/bz-login.git"
+    "url": "git+https://github.com/bigzhu/bz-base.git"
   },
   "bugs": {
-    "url": "https://github.com/bigzhu/bz-login/issues"
+    "url": "https://github.com/bigzhu/bz-base/issues"
   },
-  "homepage": "https://github.com/bigzhu/bz-login#readme",
+  "homepage": "https://github.com/bigzhu/bz-base#readme",
   "files": [
     "dist"
   ],
