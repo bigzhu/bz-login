@@ -5,7 +5,7 @@
   "name": "bz-login",
   "version": "2.1.5",
   "description": "bz-login",
-  "main": "dist/main.js",
+  "main": "src/Bz.vue",
   "keywords": [
     "vue",
     "component",
@@ -21,7 +21,8 @@
   },
   "homepage": "https://github.com/bigzhu/bz-base#readme",
   "files": [
-    "dist"
+    "src/Bz.vue",
+    "src/assets"
   ],
   "scripts": {
     "dev": "node build/dev-server.js",
