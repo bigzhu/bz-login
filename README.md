@@ -1,6 +1,6 @@
-# bz-base
+# bz-login
 
-> bz-base
+> bz-login
 
 ## Build Setup
 
