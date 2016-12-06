@@ -1,9 +1,6 @@
 {
   "name": "bz-login",
-  "version": "2.0.0",
-  "description": "bz-login",
-  "name": "bz-login",
-  "version": "2.1.6",
+  "version": "2.1.7",
   "description": "bz-login",
   "main": "src/Bz.vue",
   "keywords": [
